@@ -5,7 +5,6 @@
   <h1>2、配置路由</h1>
   <pre v-highlight><code class="lang-shell">$ yarn add vue-router@next</code></pre>
   <h2>2.1、初始化vue-router</h2>
-  <h3>创建 history 对象(新建router目录，创建index.ts文件)</h3>
   <pre v-highlight><code class="lang-javascript">
     import { createRouter, createWebHistory } from 'vue-router'
     export const router = createRouter({
