@@ -30,4 +30,14 @@ app.config.globalProperties.$nextTick = nextTick;
 app.config.globalProperties.$useRouter = useRouter;
 app.config.globalProperties.$useRoute = useRoute;
 
+import hljs from 'highlight.js';
+import 'highlight.js/styles/a11y-dark.css'	//样式
+
+app.directive('highlight', function (el: any) {
+  let blocks = el.querySelectorAll('pre code');
+  blocks.forEach((block: any) => {
+    hljs.highlightBlock(block)
+  })
+})
+
 app.mount('#app')

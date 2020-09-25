@@ -14,9 +14,9 @@
         <DesktopOutlined />
         <span>about</span>
       </a-menu-item>
-      <a-menu-item key="/3">
+      <a-menu-item key="/table">
         <InboxOutlined />
-        <span>Option 3</span>
+        <span>table</span>
       </a-menu-item>
       <a-sub-menu key="/sub1">
         <template v-slot:title>

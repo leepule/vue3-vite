@@ -5,6 +5,7 @@ import {
 
 import Home from '../views/home.vue'
 import About from '../views/about.vue'
+import Table from '../views/table.vue'
 import NoFound from '../components/NoFound.vue'
 
 export const router = createRouter({
@@ -21,6 +22,10 @@ export const router = createRouter({
     {
       path: '/about',
       component: About
+    },
+    {
+      path: '/table',
+      component: Table
     },
     {
       path: '/:pathMatch(.*)*',

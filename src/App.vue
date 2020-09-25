@@ -1,7 +1,9 @@
 <template>
   <a-layout id="components-layout-demo-custom-trigger">
     <a-layout-sider v-model:collapsed="state.collapsed" :trigger="null" collapsible>
-      <div class="logo" />
+      <!-- <div class="logo" /> -->
+      <img src="./assets/logo.png" class="logo" v-if="!state.collapsed" />
+      <img src="./assets/logo-1.png" class="logo" v-else />
       <Menu />
     </a-layout-sider>
     <a-layout>
@@ -54,6 +56,8 @@ export default {
     return {
       state
     };
+  },
+  mounted() {
   }
 };
 </script>
@@ -72,7 +76,6 @@ export default {
 
 #components-layout-demo-custom-trigger .logo {
   height: 32px;
-  background: rgba(255, 255, 255, 0.2);
   margin: 16px;
 }
 </style>
