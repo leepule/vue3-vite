@@ -53,6 +53,7 @@ import {
   InboxOutlined,
   AppstoreOutlined,
 } from "@ant-design/icons-vue";
+import { notification } from 'ant-design-vue';
 import { getCurrentInstance } from "vue";
 export default {
   components: {
@@ -69,15 +70,6 @@ export default {
     };
   },
   setup() {
-    const { ctx }: any = getCurrentInstance();
-    const jump = ({ item, key, keyPath }: any) => {
-      ctx.$router.push({
-        path: key
-      })
-    }
-    return {
-      jump
-    }
   },
   watch:{
     $route(to: any){
@@ -88,9 +80,9 @@ export default {
     toggleCollapsed() {
       this.collapsed = !this.collapsed;
     },
-    // jump({ item, key, keyPath }) {
-    //   this.$router.push(key)
-    // }
+    jump({ item, key, keyPath }:any) {
+      this.$router.push(key)
+    }
   },
 };
 </script>

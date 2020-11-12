@@ -36,7 +36,7 @@
 <script lang="ts">
 import Menu from "./components/Menu.vue";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons-vue";
-import { getCurrentInstance, computed } from "vue";
+import { getCurrentInstance, computed, reactive } from "vue";
 export default {
   name: "App",
   components: {
@@ -51,7 +51,7 @@ export default {
   },
   setup(props: any, context: any) {
     const { ctx }: any = getCurrentInstance();
-    const state = ctx.$reactive({
+    const state = reactive({
       collapsed: false
     })
     return {
