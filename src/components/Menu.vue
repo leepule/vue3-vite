@@ -18,6 +18,10 @@
         <InboxOutlined />
         <span>table</span>
       </a-menu-item>
+      <a-menu-item key="/watch">
+        <InboxOutlined />
+        <span>watch</span>
+      </a-menu-item>
       <a-sub-menu key="/sub1">
         <template v-slot:title>
           <span><MailOutlined /><span>Navigation One</span></span>
@@ -76,7 +80,7 @@ export default {
     }
   },
   watch:{
-    $route(to){
+    $route(to: any){
       this.selectedKeys = [to.fullPath]
     }
   },

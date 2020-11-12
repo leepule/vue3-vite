@@ -2,7 +2,8 @@
   <a-layout id="components-layout-demo-custom-trigger">
     <a-layout-sider v-model:collapsed="state.collapsed" :trigger="null" collapsible>
       <!-- <div class="logo" /> -->
-      <img src="./assets/logo.png" class="logo" v-if="!state.collapsed" />
+      <img src="./assets/logo-1.png" class="logo" v-if="!state.collapsed" />
+      <span v-if="!state.collapsed" style="color:#fff;font-size:16px;">VUE3-VITE</span>
       <img src="./assets/logo-1.png" class="logo" v-else />
       <Menu />
     </a-layout-sider>
@@ -77,5 +78,9 @@ export default {
 #components-layout-demo-custom-trigger .logo {
   height: 32px;
   margin: 16px;
+  vertical-align: middle;
+}
+#components-layout-demo-custom-trigger span {
+  vertical-align: middle;
 }
 </style>

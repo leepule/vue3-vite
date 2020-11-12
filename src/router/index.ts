@@ -6,6 +6,7 @@ import {
 import Home from '../views/home.vue'
 import About from '../views/about.vue'
 import Table from '../views/table.vue'
+import Watch from '../views/watch.vue'
 import NoFound from '../components/NoFound.vue'
 
 export const router = createRouter({
@@ -26,6 +27,10 @@ export const router = createRouter({
     {
       path: '/table',
       component: Table
+    },
+    {
+      path: '/watch',
+      component: Watch
     },
     {
       path: '/:pathMatch(.*)*',
